@@ -4,6 +4,8 @@
 
 1. **Installation of Required Dependencies:**
 
+- File structure:
+
    ```plaintext
    - sky world
        - backend
@@ -50,6 +52,7 @@
 
    #### Using PaaS (e.g., Heroku)
 
+   - Go to https://id.heroku.com/login.
    - Create a Heroku account.
    - Create an app for your project (e.g., `simple-survey-app`).
    - Install Heroku CLI by following [Heroku CLI Installation](https://cli-assets.heroku.com/heroku-x64.exe).

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+  {% for question in response_data.questions.question %}
+    <question  name="{{ question.name }}" type="{{ question.type }}" required="{{question.required}}">
+      <text>{{ question.text }}</text>
+      <description>{{ question.description }}</description>
+      {% if question.options %}
+        <options multiple="{{ question.options.multiple }}">
+          {% for option in question.options.option %}
+            <option value="{{ option.value }}">{{ option.text }}</option>
+          {% endfor %}
+        </options>
+      {% endif %}
+      {% if question.file_properties_format %}
+        <file_properties 
+        format="{{ question.file_properties_format }}"
+        max_file_size="{{ question.file_properties_max_file_size }}"
+        max_file_size_unit="{{ question.file_properties_max_file_size_unit }}"
+        multiple="{{ question.file_properties_multiple }}"
+        />
+      {% endif %}
+    </question>
+  {% endfor %}
+</questions>
